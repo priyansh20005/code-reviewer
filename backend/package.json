@@ -9,11 +9,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  
   "dependencies": {
     "@google/genai": "^1.7.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.0.0",
     "express": "^5.1.0"
-    
   }
 }

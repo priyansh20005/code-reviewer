@@ -43,7 +43,10 @@ main .left{
 }
 
 main .right{
-  background-color:gainsboro ;
+  background-color:rgb(79, 49, 49) ;
+  padding :1rem 2rem ;
+  font-size:1.5rem;
+  overflow:auto;
 }
 
  .review{

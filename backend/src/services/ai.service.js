@@ -2,7 +2,7 @@
 const { GoogleGenAI } =require("@google/genai") ;
 
 
-const ai = new GoogleGenAI({apikey:"AIzaSyDyBaIGs9dg0br5KHIPSrOCOxkxzSfLO34"});
+const ai = new GoogleGenAI({apiKey:process.env.GOOGLE_GEMINI_KEY});
 
 async function generateContent(prompt) {
   const response = await ai.models.generateContent({
@@ -12,7 +12,7 @@ async function generateContent(prompt) {
     contents: prompt,
   });
   console.log(response.text);
-  return  response;
+  return  response.candidates?.[0]?.content?.parts?.[0]?.text || "";
 } 
 
 module.exports = generateContent ;
